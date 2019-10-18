@@ -81,41 +81,49 @@ class App extends Component {
     const inputError = this.validateInput();
     const displayResults = this.state.results;
     return (
-      <>
-        <section>
-          <h1>Star Wars Search</h1>
+      <main className="main">
+        <section className="search">
+          <header>
+            <h1 className="header">Star Wars Search</h1>
+          </header>
             <form className="search-form" onSubmit = {this.handleSubmit}>
               <div className="search-error" role="alert">
                 {error && <p>{error.message}</p>}
               </div>
-              <label htmlFor="filter" className="filter">
-                Select a filter:
-              </label>
-              <select name="filter" id="filter" onChange={this.updateFilter}>
-                <option value="">
-                  ---
-                </option>
-                {this.state.filters.map( (filter, index) => {
-                  return (
-                    <option key={index} value={filter}>{filter}</option> 
-                  )
-                })}
-              </select>
-              <label htmlFor="search" className="search-label">
-                Search
-              </label>
-              <input type="text" name="search" id="search" className="search-input" onChange={this.updateSearch} required></input>
-              {this.state.searchTerm.touched && <ValidationError message={inputError} />}
-              <button className="search-button" disabled={this.validateInput() || this.validateFilter()}>
-                Get results!
-              </button>
+              <div className="filter-div">
+                <label htmlFor="filter" className="filter-label">
+                  Select a filter:
+                </label>
+                <select name="filter" id="filter" onChange={this.updateFilter}>
+                  <option value="">
+                    ---
+                  </option>
+                  {this.state.filters.map( (filter, index) => {
+                    return (
+                      <option key={index} value={filter}>{filter}</option> 
+                    )
+                  })}
+                </select>
+              </div>
+              <div className="search-div">
+                <label htmlFor="search" className="search-label">
+                  Search
+                </label>
+                <input type="text" name="search" id="search" className="search-input" onChange={this.updateSearch} required></input>
+                {this.state.searchTerm.touched && <ValidationError message={inputError} />}
+                <button className="search-button" disabled={this.validateInput() || this.validateFilter()}>
+                  Get results!
+                </button>
+              </div>
             </form>
         </section>
 
-        <section>
-          {this.state.loading ? <h3>Loading! This might take a few seconds!</h3> : this.state.results.length === 0 ? <p>No results available for that search query.</p> : <Display results={displayResults}/>}
+        <section className="results">
+          <div className="results-div">
+            {this.state.loading ? <h3>Loading! This might take a few seconds!</h3> : this.state.results.length === 0 ? <p>No results available for that search query.</p> : <Display results={displayResults}/>}
+          </div>
         </section>
-      </>
+      </main>
     )
   }
 }

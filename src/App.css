@@ -21,6 +21,69 @@
   color: #09d3ac;
 }
 
+html {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+body {
+  text-align: center;
+  margin-left: 18%;
+  margin-right: 18%;
+}
+
+.header {
+  text-align: center
+}
+
 .results-ul {
   list-style-type: none
+}
+
+.filter-label {
+  margin: 10px;
+}
+
+.search-label {
+  margin: 10px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center
+}
+
+.results-div {
+  text-align: center
+}
+
+.results-ul {
+  text-align: left;
+}
+
+.single-result {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  margin: 1%;
+}
+
+.main {
+  align-items: center
+}
+
+@media screen and (min-width: 650px) {
+  html {
+    max-width: 650px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    max-width: 1000px;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
 }

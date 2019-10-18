@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders the UI as expected 1`] = `
+<main
+  className="main"
+>
+  <section
+    className="search"
+  >
+    <header>
+      <h1
+        className="header"
+      >
+        Star Wars Search
+      </h1>
+    </header>
+    <form
+      className="search-form"
+      onSubmit={[Function]}
+    >
+      <div
+        className="search-error"
+        role="alert"
+      />
+      <div
+        className="filter-div"
+      >
+        <label
+          className="filter-label"
+          htmlFor="filter"
+        >
+          Select a filter:
+        </label>
+        <select
+          id="filter"
+          name="filter"
+          onChange={[Function]}
+        >
+          <option
+            value=""
+          >
+            ---
+          </option>
+          <option
+            value="films"
+          >
+            films
+          </option>
+          <option
+            value="people"
+          >
+            people
+          </option>
+          <option
+            value="planets"
+          >
+            planets
+          </option>
+          <option
+            value="species"
+          >
+            species
+          </option>
+          <option
+            value="starships"
+          >
+            starships
+          </option>
+          <option
+            value="vehicles"
+          >
+            vehicles
+          </option>
+        </select>
+      </div>
+      <div
+        className="search-div"
+      >
+        <label
+          className="search-label"
+          htmlFor="search"
+        >
+          Search
+        </label>
+        <input
+          className="search-input"
+          id="search"
+          name="search"
+          onChange={[Function]}
+          required={true}
+          type="text"
+        />
+        <button
+          className="search-button"
+          disabled="Search query is required"
+        >
+          Get results!
+        </button>
+      </div>
+    </form>
+  </section>
+  <section
+    className="results"
+  >
+    <div
+      className="results-div"
+    >
+      <p>
+        No results available for that search query.
+      </p>
+    </div>
+  </section>
+</main>
+`;
